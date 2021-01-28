@@ -1,5 +1,5 @@
 # syslog-test
-Python Syslog client to send messages to a Vector syslog input sync<br/>
+Python Syslog client to send messages to [Vector](https://vector.dev) syslog input sync<br/>
 
 ## Installation
 Install [Vector](https://vector.dev/guides/getting-started)<br/>
