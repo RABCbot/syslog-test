@@ -19,6 +19,15 @@ data_dir = "/var/lib/vector"
   inputs   = ["in", "syslog"]
   type     = "console"
   encoding = "text"
+  
+[sinks.cloud_watch_logs]
+type = "aws_cloudwatch_logs"
+inputs = ["stdin"]
+group_name = "/<your-log-group>"
+stream_name = "<your-stream-name>"
+region = "<your-region>"
+encoding = "json"  
+# Add your AWS access key/token to ~\.aws\credentials file
 ```
 ## Run
 Launch Vector<br/>
