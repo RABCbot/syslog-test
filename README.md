@@ -1,9 +1,10 @@
 # syslog-test
+Python Syslog client to send messages to a Vector syslog input sync<br/>
 
-Install Vector https://vector.dev/guides/getting-started
-
-Edit vector.toml file
-'''
+## Installation
+Install [Vector](https://vector.dev/guides/getting-started)<br/>
+Edit vector.toml configuration file<br/>
+```
 data_dir = "/var/lib/vector"
 
 [sources.in]
@@ -18,11 +19,16 @@ data_dir = "/var/lib/vector"
   inputs   = ["in", "syslog"]
   type     = "console"
   encoding = "text"
-'''
-Run Vector
+```
+## Run
+Launch Vector<br/>
+```
 vector --config ./vector.toml
+```
 
-Run python sample file
+Run python sample file<br/>
+```
 python3 syslog.py
+```
 
 You should see the message on the Vector stdout console
